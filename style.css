@@ -1,0 +1,201 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+}
+
+body {
+  background-color: hsl(237, 49%, 15%);
+  font-weight: 700;
+}
+
+.blurry {
+  opacity: 0.1;
+  transition: all 0.1s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+.logo-scoreboard {
+  display: flex;
+  border: 0.1rem solid hsl(214, 47%, 23%);
+  border-radius: 0.5rem;
+  width: 40%;
+  height: 4rem;
+  position: absolute;
+  top: 5%;
+  left: 30.5%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo img {
+  width: 50%;
+}
+
+.scoreboard {
+  border: 0.1rem solid white;
+  background-color: white;
+  width: 15%;
+  height: 4rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.selectside {
+  position: absolute;
+  top: 40%;
+  left: 39%;
+}
+
+.paper-scissor {
+  position: absolute;
+  top: -20%;
+  left: -17%;
+  display: flex;
+  gap: 5rem;
+  width: 30rem;
+}
+
+.paperimage {
+  border: 1rem solid hsl(230, 89%, 62%);
+  border-radius: 60%;
+  background-color: white;
+  width: 30%;
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scissorimage {
+  border: 1rem solid hsl(349, 71%, 52%);
+  border-radius: 60%;
+  background-color: white;
+  width: 30%;
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rockimage {
+  position: absolute;
+  top: 170%;
+  left: 25%;
+  border: 1rem solid hsl(39, 89%, 49%);
+  border-radius: 60%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 7rem;
+}
+
+.rules {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  width: 7%;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.showrules {
+  position: absolute;
+  z-index: 999;
+  top: 20%;
+  left: 36.5%;
+  height: 55vh;
+  width: 25%;
+  background-color: white;
+  border-radius: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.rulestext {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+}
+
+.closeimage {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+.rulesimage {
+  height: 100%;
+  width: 100%;
+}
+
+.rulesdiv {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.sectionthree {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 40%;
+  left: 32%;
+  width: 40%;
+  height: 50%;
+  border: 0.1rem solid red;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  border: 0.1rem solid blue;
+  width: 50%;
+}
+
+.computer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 0.1rem solid blue;
+  width: 50%;
+}
+
+.emptydiv {
+  border-radius: 60%;
+  background-color: hsl(240, 45%, 13%);
+  width: 70%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.paperimagetwo {
+  border: 1rem solid hsl(230, 89%, 62%);
+  border-radius: 60%;
+  background-color: white;
+  width: 70%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

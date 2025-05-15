@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <div class="sectionone">
+        <div class="logo-scoreboard">
+          <div class="logo">
+            <img src="images/logo.svg" alt="logo" />
+          </div>
+
+          <div class="scoreboard">
+            <p>SCORE</p>
+            <h1>12</h1>
+          </div>
+        </div>
+
+        <div class="selectside hidden">
+          <!-- remove this hidden -->
+          <div class="triangle">
+            <img src="images/bg-triangle.svg" alt="triangle" />
+          </div>
+          <div class="paper-scissor">
+            <div class="paperimage">
+              <img src="images/icon-paper.svg" alt="paper" />
+            </div>
+            <div class="scissorimage">
+              <img src="images/icon-scissors.svg" alt="scissor" />
+            </div>
+            <div class="rockimage">
+              <img src="images/icon-rock.svg" alt="rock" />
+            </div>
+          </div>
+        </div>
+
+        <div class="rulesdiv">
+          <button class="rules">RULES</button>
+        </div>
+      </div>
+
+      <div class="sectiontwo hidden">
+        <div class="showrules">
+          <div class="rulestext">
+            <h2>RULES</h2>
+            <img class="closeimage" src="images/icon-close.svg" alt="close" />
+          </div>
+
+          <div class="rulesdiv">
+            <img class="rulesimage" src="images/image-rules.svg" alt="rules" />
+          </div>
+        </div>
+      </div>
+
+      <div class="sectionthree">
+        <div class="user">
+          <h3>YOU PICKED</h3>
+          <div class="paperimagetwo">
+            <img src="images/icon-paper.svg" alt="paper" />
+          </div>
+        </div>
+
+        <div class="computer">
+          <h3>THE HOUSE PICKED</h3>
+          <div class="emptydiv"></div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
