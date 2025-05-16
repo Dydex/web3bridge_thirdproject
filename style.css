@@ -158,7 +158,6 @@ body {
   left: 32%;
   width: 40%;
   height: 50%;
-  border: 0.1rem solid red;
 }
 
 .user {
@@ -166,7 +165,7 @@ body {
   flex-direction: column;
   gap: 2rem;
   align-items: center;
-  border: 0.1rem solid blue;
+
   width: 50%;
 }
 
@@ -175,16 +174,20 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 0.1rem solid blue;
+
   width: 50%;
+  gap: 3rem;
+  margin-bottom: 3rem;
 }
 
 .emptydiv {
   border-radius: 60%;
+
   background-color: hsl(240, 45%, 13%);
   width: 70%;
-  height: 60%;
+  height: 80%;
   display: flex;
+
   align-items: center;
   gap: 2rem;
 }
