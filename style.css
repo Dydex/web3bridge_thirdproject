@@ -173,7 +173,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
 
   width: 50%;
   gap: 3rem;
@@ -196,8 +196,8 @@ body {
   border: 1rem solid hsl(230, 89%, 62%);
   border-radius: 60%;
   background-color: white;
-  width: 70%;
-  height: 60%;
+  width: 60%;
+  height: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
