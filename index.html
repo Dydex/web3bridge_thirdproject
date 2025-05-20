@@ -16,23 +16,22 @@
 
           <div class="scoreboard">
             <p>SCORE</p>
-            <h1>12</h1>
+            <h1 class="score">0</h1>
           </div>
         </div>
 
         <div class="selectside">
-          <!-- remove this hidden -->
           <div class="triangle">
             <img src="images/bg-triangle.svg" alt="triangle" />
           </div>
           <div class="paper-scissor">
-            <div class="paperimage">
+            <div class="user-choice paperimage">
               <img src="images/icon-1.svg" alt="paper" />
             </div>
-            <div class="scissorimage">
+            <div class="user-choice scissorimage">
               <img src="images/icon-2.svg" alt="scissor" />
             </div>
-            <div class="rockimage">
+            <div class="user-choice rockimage">
               <img src="images/icon-3.svg" alt="rock" />
             </div>
           </div>
@@ -61,8 +60,13 @@
           <div class="user">
             <h3>YOU PICKED</h3>
             <div class="paperimagetwo">
-              <img src="images/icon-1.svg" alt="paper" />
+              <img class="selected-image" src="" alt="user-choice" />
             </div>
+          </div>
+
+          <div id="results" class="results">
+            <h1 class="resultstext hidden"></h1>
+            <button class="playagain hidden">Play Again</button>
           </div>
 
           <div class="computer">
