@@ -70,6 +70,9 @@ body {
 .paperimage {
   border: 1rem solid hsl(230, 89%, 62%);
   border-radius: 60%;
+  box-shadow: 0 0 0 6rem rgba(255, 255, 255, 0.4),
+    0 0 0 4rem rgba(255, 255, 255, 0.2), 0 0 0 2rem rgba(255, 255, 255, 0.1);
+
   background-color: white;
   width: 30%;
   height: 7rem;

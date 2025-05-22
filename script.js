@@ -14,26 +14,30 @@ const showRules = document.querySelector(".rules");
 const sectionOne = document.querySelector(".sectionone");
 const sectionTwo = document.querySelector(".sectiontwo");
 const resultText = document.querySelector(".resultstext");
-const playAgainBtn = document.querySelector(".playagain");
+
 const userPickImg = document.querySelector(".paperimagetwo");
 const computerPickImg = document.querySelector(".emptydiv");
 const showScore = document.querySelector(".score");
+
 let score = 0;
 
 showRules.addEventListener("click", function () {
   sectionTwo.classList.remove("hidden");
   sectionOne.classList.add("blurry");
+  sectionThree.classList.add("blurry");
 });
 
 closeRules.addEventListener("click", function () {
   sectionTwo.classList.add("hidden");
   sectionOne.classList.remove("blurry");
+  sectionThree.classList.remove("blurry");
 });
 
 const userChoice = document.querySelectorAll(".user-choice img");
 const selectedImage = document.querySelector(".selected-image");
 
-//
+let computerTimeout;
+let resultTimeout;
 
 userChoice.forEach((choice) => {
   choice.addEventListener("click", function () {
@@ -43,7 +47,7 @@ userChoice.forEach((choice) => {
     selectSide.classList.add("hidden");
     lastSection.classList.remove("hidden");
 
-    setTimeout(function () {
+    computerTimeout = setTimeout(function () {
       const computer = Math.floor(Math.random() * 3) + 1;
 
       emptyDiv.innerHTML = `<img class='computerimage' src="images/icon-${computer}.svg" alt="computer pick" />`;
@@ -57,9 +61,9 @@ userChoice.forEach((choice) => {
       emptyDiv.style.height = "50%";
       computerDiv.style.marginBottom = "0rem";
       computerDiv.style.gap = "2rem";
-    }, 1000);
+    }, 2000);
 
-    setTimeout(function () {
+    resultTimeout = setTimeout(function () {
       sectionThree.style.width = "80%";
       sectionThree.style.left = "12%";
       userPickImg.style.width = "40%";
@@ -94,4 +98,22 @@ userChoice.forEach((choice) => {
       }
     }, 5000);
   });
+});
+
+const playAgainBtn = document.querySelector(".playagain");
+playAgainBtn.addEventListener("click", function () {
+  clearTimeout(computerTimeout);
+  clearTimeout(resultTimeout);
+
+  lastSection.classList.add("hidden");
+  selectSide.classList.remove("hidden");
+  selectedImage.setAttribute("src", "");
+  resultText.classList.add("hidden");
+  playAgainBtn.classList.add("hidden");
+  emptyDiv.innerHTML = "";
+  emptyDiv.removeAttribute("style");
+  computerDiv.removeAttribute("style");
+  sectionThree.removeAttribute("style");
+  userPickImg.removeAttribute("style");
+  computerPickImg.removeAttribute("style");
 });
