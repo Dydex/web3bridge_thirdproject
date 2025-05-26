@@ -47,6 +47,7 @@ userChoice.forEach((choice) => {
     selectSide.classList.add("hidden");
     lastSection.classList.remove("hidden");
 
+    // Add Computer Image
     computerTimeout = setTimeout(function () {
       const computer = Math.floor(Math.random() * 3) + 1;
 
@@ -56,13 +57,14 @@ userChoice.forEach((choice) => {
       emptyDiv.style.display = "flex";
       emptyDiv.style.alignItems = "center";
       emptyDiv.style.justifyContent = "center";
-      emptyDiv.style.border = " 1rem solid hsl(230, 89%, 62%)";
+      emptyDiv.style.border = " 1.5rem solid hsl(230, 89%, 62%)";
       emptyDiv.style.width = "60%";
       emptyDiv.style.height = "50%";
       computerDiv.style.marginBottom = "0rem";
       computerDiv.style.gap = "2rem";
     }, 2000);
 
+    // Show Win or Lose
     resultTimeout = setTimeout(function () {
       sectionThree.style.width = "80%";
       sectionThree.style.left = "12%";
@@ -92,14 +94,19 @@ userChoice.forEach((choice) => {
         resultText.innerHTML = "You Win";
         score++;
         showScore.innerHTML = score;
+        userPickImg.style.boxShadow =
+          "0 0 0 6rem rgba(255, 255, 255, 0.01), 0 0 0 4rem rgba(255, 255, 255, 0.02), 0 0 0 2rem rgba(255, 255, 255, 0.03)";
       } else {
         resultText.innerHTML = "You Lose";
         showScore.innerHTML = score;
+        computerPickImg.style.boxShadow =
+          "0 0 0 6rem rgba(255, 255, 255, 0.01), 0 0 0 4rem rgba(255, 255, 255, 0.02), 0 0 0 2rem rgba(255, 255, 255, 0.03)";
       }
     }, 5000);
   });
 });
 
+// Play again function
 const playAgainBtn = document.querySelector(".playagain");
 playAgainBtn.addEventListener("click", function () {
   clearTimeout(computerTimeout);
